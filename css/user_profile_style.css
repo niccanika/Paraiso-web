@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&family=Playfair+Display:wght@400;500;600;700;900&display=swap");
+body {
+  width: 100vw;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+}
+
+button {
+  width: 18.75rem;
+  height: 3.84rem;
+  margin: 3.994rem auto;
+  padding: 0.8rem;
+  background-color: #2A462E;
+  font-family: "Chivo", sans-serif;
+  font-weight: lighter;
+  font-size: 1.8rem;
+  color: #FFFCF7;
+  border: none;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+button a {
+  color: #FFFCF7;
+}
+
+ul {
+  list-style-type: none;
+  margin: 2rem 0.1rem;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 25vw;
+  display: flex;
+}
+
+/*# sourceMappingURL=user_profile_style.css.map */

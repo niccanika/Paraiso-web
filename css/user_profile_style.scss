@@ -1,0 +1,47 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&family=Playfair+Display:wght@400;500;600;700;900&display=swap');
+
+body {
+  width: 100vw;
+}
+
+h1 {
+  font-family: $playfair;
+  font-size: 3rem;
+}
+
+button {
+  width: 18.75rem;
+  height: 3.84rem;
+  margin: 3.994rem auto;
+  padding: .8rem;
+  background-color: $btn-color;
+  font-family: $chivo;
+  font-weight: lighter;
+  font-size: 1.8rem;
+  color: $bg-color;
+  border: none;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+
+  a {
+    color: $bg-color;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 2rem .1rem;
+
+  li {
+    margin-bottom: .5rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 25vw;
+  //overflow-x: hidden;
+  display: flex;
+}

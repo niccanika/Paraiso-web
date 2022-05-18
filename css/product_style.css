@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&family=Playfair+Display:wght@400;500;600;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFCF7;
+  color: #1A2421;
+  font-family: "Chivo", sans-serif;
+}
+body a {
+  color: #1A2421;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #FFFCF7;
+}
+nav .left, nav .right, nav #logo {
+  width: 33.33%;
+}
+nav .left ul, nav .right ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav .right ul {
+  justify-content: flex-end;
+}
+nav .left li, nav .right li {
+  list-style: none;
+  padding: 1rem;
+  display: block;
+  font-weight: lighter;
+  font-size: 1.25rem;
+}
+nav .left a {
+  position: relative;
+}
+nav .left a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #1A2421;
+  transform-origin: bottom left;
+  transition: transform 200ms ease-out;
+}
+nav .left a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+nav .toggle-nav {
+  display: none;
+}
+nav .social-nav {
+  display: none;
+}
+nav .search-mobile {
+  display: none;
+}
+nav #logo {
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.go-back {
+  display: flex;
+  gap: 0.5rem;
+  margin: 5rem 1rem 1rem 1rem;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  width: 5rem;
+}
+
+article .product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article .product .product-text {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+article .product .product-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8125rem;
+  font-weight: lighter;
+  margin-bottom: 3rem;
+}
+article .product .product-text p {
+  font-size: 1.25rem;
+}
+article .product .product-text p:not(.price) {
+  font-weight: lighter;
+  width: 90%;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+article .product .product-text .price {
+  margin-bottom: 3rem;
+}
+article .product .product-text .buttons {
+  display: flex;
+  align-items: center;
+}
+article .product .product-text .buttons button, article .product .product-text .buttons .button {
+  width: 18.75rem;
+  height: 3.84rem;
+  margin-right: 1rem;
+  padding: 0.8rem;
+  background-color: #2A462E;
+  font-family: "Chivo", sans-serif;
+  font-weight: lighter;
+  font-size: 1.8rem;
+  color: #FFFCF7;
+  border: none;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+article .product .product-text .buttons a img {
+  width: 2rem;
+}
+article .product .product-img {
+  display: flex;
+  justify-content: center;
+  width: 45%;
+}
+article .product .product-img img {
+  width: 80%;
+}
+article .product-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.9rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+article .product-info .item {
+  width: 21%;
+}
+article .product-info .item p:not(.name-text) {
+  font-weight: lighter;
+}
+article .product-info .item .name {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.7rem;
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+article .video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+article .video iframe {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.numberstyle {
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.08);
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  nav .burger {
+    width: 33.33%;
+  }
+  nav .toggle-nav {
+    display: block;
+    padding: 1rem;
+    width: 1rem;
+  }
+  nav .left, nav #login {
+    display: none;
+    width: 100%;
+  }
+  nav .left {
+    position: absolute;
+    left: 2rem;
+  }
+  nav .left ul {
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  nav .social-nav {
+    display: none;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    position: absolute;
+    top: 27rem;
+  }
+  nav .social-active {
+    display: flex;
+  }
+  nav #login {
+    font-weight: bold;
+    position: absolute;
+    left: 3rem;
+    top: 20rem;
+  }
+  nav .active {
+    display: block;
+  }
+
+  .active-nav {
+    height: 35rem;
+  }
+
+  article {
+    width: 100%;
+  }
+  article .product {
+    flex-direction: column;
+    align-items: stretch;
+    width: 85%;
+    margin: 0 auto;
+  }
+  article .product .product-text {
+    width: 100%;
+    order: 2;
+  }
+  article .product .product-img {
+    width: 100%;
+    order: 1;
+  }
+  article .product .product-img img {
+    width: 50%;
+  }
+  article .product-info {
+    width: 85%;
+    flex-wrap: wrap;
+    margin: 4rem auto 4rem auto;
+  }
+  article .product-info .item {
+    width: 40%;
+  }
+  article .video {
+    height: 25rem;
+  }
+  article .video iframe {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  nav .right ul li {
+    margin: 1.2rem 0.5rem;
+    padding: 0;
+  }
+  nav .right img {
+    width: 1.3rem;
+  }
+  nav .left {
+    top: 5rem;
+  }
+  nav .social-nav {
+    top: 40rem;
+  }
+  nav .search-mobile {
+    position: absolute;
+    left: 3rem;
+    display: none;
+    width: 80%;
+    margin: 7rem 0;
+    height: 2rem;
+    justify-content: center;
+  }
+  nav .search-mobile button {
+    width: 10%;
+    height: 2.2rem;
+    border-style: none;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 1px solid #1A2421;
+    background-color: transparent;
+  }
+  nav .search-mobile input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #1A2421;
+    padding: 1.44rem 3rem 0.7rem 0;
+    background-color: #FFFCF7;
+    font-size: 1.25rem;
+    font-family: "Chivo", sans-serif;
+    font-weight: lighter;
+  }
+  nav .search-mobile label {
+    display: none;
+  }
+  nav #login {
+    top: 25rem;
+  }
+  nav #search {
+    display: none;
+  }
+  nav .search-active {
+    display: flex;
+  }
+
+  .active-nav {
+    height: 100%;
+  }
+
+  article .product {
+    width: 92%;
+  }
+  article .product .product-img img {
+    width: 90%;
+  }
+  article .product-info {
+    width: 92%;
+  }
+  article .product-info .item {
+    width: 100%;
+  }
+  article .video {
+    height: 15rem;
+  }
+  article .video iframe {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=product_style.css.map */

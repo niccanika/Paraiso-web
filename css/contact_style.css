@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&family=Playfair+Display:wght@400;500;600;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFCF7;
+  color: #1A2421;
+  font-family: "Chivo", sans-serif;
+}
+body a {
+  color: #1A2421;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .social-media {
+  margin-left: 3.1%;
+  margin-bottom: 4rem;
+}
+.container .social-media p {
+  margin-bottom: 1rem;
+}
+.container .social-media .social-flex {
+  display: flex;
+}
+.container .social-media .social-flex a {
+  display: flex;
+  width: 10rem;
+  font-weight: lighter;
+  align-items: center;
+  margin-right: 2rem;
+}
+.container .social-media .social-flex a img {
+  margin-right: 0.2rem;
+}
+.container .small {
+  display: none;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #FFFCF7;
+}
+nav .left, nav .right, nav #logo {
+  width: 33.33%;
+}
+nav .left ul, nav .right ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav .right ul {
+  justify-content: flex-end;
+}
+nav .left li, nav .right li {
+  list-style: none;
+  padding: 1rem;
+  display: block;
+  font-weight: lighter;
+  font-size: 1.25rem;
+}
+nav .left a {
+  position: relative;
+}
+nav .left a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #1A2421;
+  transform-origin: bottom left;
+  transition: transform 200ms ease-out;
+}
+nav .left a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+nav .toggle-nav {
+  display: none;
+}
+nav .social-nav {
+  display: none;
+}
+nav .search-mobile {
+  display: none;
+}
+nav #logo {
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.go-back {
+  display: flex;
+  gap: 0.5rem;
+  margin: 5rem 1rem 1rem 1rem;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  width: 5rem;
+}
+
+article {
+  display: flex;
+  justify-content: space-evenly;
+}
+article iframe {
+  height: 28.125rem;
+}
+article .info {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+article .info h1 {
+  font-size: 3.75rem;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+article .info .text-info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: lighter;
+}
+article .info .text-info .phone-mail {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+article .info .text-info .item {
+  margin: 2rem 2rem 2rem 0;
+}
+article .info .text-info .item .bold {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+article .contact-form {
+  width: 45%;
+}
+article .contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5rem auto;
+}
+article .contact-form form * {
+  display: block;
+  margin-bottom: 2rem;
+}
+article .contact-form form input, article .contact-form form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #1A2421;
+  padding: 1.44rem 0.48rem 0.48rem 0.48rem;
+  margin-top: 0.96rem;
+  background-color: #FFFCF7;
+  font-size: 1.2rem;
+  font-family: "Chivo", sans-serif;
+  font-weight: lighter;
+}
+article .contact-form form textarea {
+  height: 3.5rem;
+}
+article .contact-form form label {
+  display: none;
+}
+article .contact-form form button, article .contact-form form .button {
+  width: 18.75rem;
+  height: 3.84rem;
+  margin: 3.994rem auto;
+  padding: 0.8rem;
+  background-color: #2A462E;
+  font-family: "Chivo", sans-serif;
+  font-weight: lighter;
+  font-size: 1.8rem;
+  color: #FFFCF7;
+  border: none;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  nav .burger {
+    width: 33.33%;
+  }
+  nav .toggle-nav {
+    display: block;
+    padding: 1rem;
+    width: 1rem;
+  }
+  nav .left, nav #login {
+    display: none;
+    width: 100%;
+  }
+  nav .left {
+    position: absolute;
+    left: 2rem;
+  }
+  nav .left ul {
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  nav .social-nav {
+    display: none;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    position: absolute;
+    top: 27rem;
+  }
+  nav .social-active {
+    display: flex;
+  }
+  nav #login {
+    font-weight: bold;
+    position: absolute;
+    left: 3rem;
+    top: 20rem;
+  }
+  nav .active {
+    display: block;
+  }
+
+  .active-nav {
+    height: 35rem;
+  }
+
+  article {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+  }
+  article .info, article .contact-form {
+    width: 100%;
+  }
+
+  .big {
+    display: none;
+  }
+
+  .container .small {
+    display: block;
+  }
+  .container .social-media {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  .social-media .social-flex a {
+    width: 10%;
+    margin: 0.5rem 7%;
+  }
+  .social-media .social-flex img {
+    width: 2rem;
+  }
+  .social-media .social-flex span {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  nav .right ul li {
+    margin: 1.2rem 0.5rem;
+    padding: 0;
+  }
+  nav .right img {
+    width: 1.3rem;
+  }
+  nav .left {
+    top: 5rem;
+  }
+  nav .social-nav {
+    top: 40rem;
+  }
+  nav .search-mobile {
+    position: absolute;
+    left: 3rem;
+    display: none;
+    width: 80%;
+    margin: 7rem 0;
+    height: 2rem;
+    justify-content: center;
+  }
+  nav .search-mobile button {
+    width: 10%;
+    height: 2.2rem;
+    border-style: none;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 1px solid #1A2421;
+    background-color: transparent;
+  }
+  nav .search-mobile input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #1A2421;
+    padding: 1.44rem 3rem 0.7rem 0;
+    background-color: #FFFCF7;
+    font-size: 1.25rem;
+    font-family: "Chivo", sans-serif;
+    font-weight: lighter;
+  }
+  nav .search-mobile label {
+    display: none;
+  }
+  nav #login {
+    top: 25rem;
+  }
+  nav #search {
+    display: none;
+  }
+  nav .search-active {
+    display: flex;
+  }
+
+  .active-nav {
+    height: 100%;
+  }
+
+  article h1 {
+    font-size: 2.8125rem;
+  }
+  article iframe {
+    height: 20rem;
+  }
+  article .info .text-info .item {
+    width: 50%;
+  }
+  article .info .text-info .phone-mail {
+    display: block;
+  }
+  article .info .text-info .phone-mail .item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  article .info .text-info .phone-mail .item:nth-of-type(1) {
+    margin-bottom: 0;
+  }
+  article .form {
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=contact_style.css.map */
